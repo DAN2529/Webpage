@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TechnoQuest 3.0 - CODE HUNT</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="nav-links">
+               <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">REGISTER NOW</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class="text-box">
+            <h1>TechnoQuest 3.0</h1>
+            <h2>Presents</h2>
+            <h3>CODE HUNT</h3>
+            <p>Code Hunt is a Treasure Hunt themed competition where participants solve programming challenges and obtain clues to advance through the levels and climb the leaderboard.<br> It tests problem-solving skills, algorithmic thinking, and coding proficiency in a fun and competitive environment.</p>
+            <h2>DATE: 07/04/2026</h2>
+            <a href="" class="hero-btn">REGISTER NOW</a>
+</div>
+
+</section>
+
+
+<!----Footer Section---->
+<section class="footer">
+    <h4>Copyright © 2026 All rights reserved <br> This webpage is made by DAN</h4>
+    <p>Designed for Techno-Quest 3.0 Code Hunt</p>
+    <div class="icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+</section>
+
+
+
+<!----JavaScript for ToggleMenu---->
+ <script>
+    
+    var navLinks = document.getElementById("nav-links");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+ </script> 
+</body>
+</html>
