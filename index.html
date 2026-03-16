@@ -1,155 +1,172 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnoQuest 3.0 - CODE HUNT</title>
-       <link rel="stylesheet" href="style.css">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
-<style>
-#timer {
-    color: white; /* Change timer text color to white for visibility */
-    font-size: 24px; /* Optional: adjust font size for better readability */
-}
-</style>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TechnoQuest 3.0 - CODE HUNT</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+   <style>
+      #timer {
+         color: white;
+         /* Change timer text color to white for visibility */
+         font-size: 24px;
+         /* Optional: adjust font size for better readability */
+      }
+   </style>
 </head>
+
 <body>
-    <section class="header">
-       <nav>
-          <a href="index.html"><img src="images/logo.png"></a>
-          <div class="nav-links" id="nav-links">
+   <section class="header">
+      <nav>
+         <a href="index.html"><img src="images/logo.png"></a>
+         <div class="nav-links" id="nav-links">
             <i class="fa fa-times" onclick="hideMenu()"></i>
-             <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">REGISTER NOW</a></li>
-             </ul>
-          </div>
-          <i class="fa fa-bars" onclick="showMenu()"></i>
-       </nav>
-    <div class="text-box">
-          <h1>TechnoQuest 3.0</h1>
-          <h2>Presents</h2>
-          <h3>CODE HUNT</h3>
-          <p>Code Hunt is a Treasure Hunt themed competition where participants solve programming challenges and obtain clues to advance through the levels and climb the leaderboard.<br> It tests problem-solving skills, algorithmic thinking, and coding proficiency in a fun and competitive environment.</p>
-          <h2>DATE: 07/04/2026</h2>
-          <a href="" class="hero-btn">REGISTER NOW</a>
-</div>
-<div id="countdown">
-    <h2>Event Starts In:</h2>
-    <div id="timer"></div>
-</div>
+            <ul>
+               <li><a href="">HOME</a></li>
+               <li><a href="">REGISTER NOW</a></li>
+            </ul>
+         </div>
+         <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+         <h1>TechnoQuest 3.0</h1>
+         <h2>Presents</h2>
+         <h3>CODE HUNT</h3>
+         <p>Code Hunt is a Treasure Hunt themed competition where participants solve programming challenges and obtain
+            clues to advance through the levels and climb the leaderboard.<br> It tests problem-solving skills,
+            algorithmic thinking, and coding proficiency in a fun and competitive environment.</p>
+         <h2>DATE: 07/04/2026</h2>
+         <div class="countdown">
+            <h2 style="font-size: 24px; margin-bottom: 10px;">Event Starts In:</h2>
+            <div id="timer"></div>
+         </div>
+         <a href="" class="hero-btn">REGISTER NOW</a>
+      </div>
 
-<script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("April 7, 2026 00:00:00").getTime();
+      <script>
+         // Set the date we're counting down to
+         var countDownDate = new Date("April 7, 2026 00:00:00").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+         // Update the count down every 1 second
+         var x = setInterval(function () {
 
-       // Get today's date and time
-       var now = new Date().getTime();
+            // Get today's date and time
+            var now = new Date().getTime();
 
-       // Find the distance between now and the count down date
-       var distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-       // Time calculations for days, hours, minutes and seconds
-       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-       // Display the result in the element with id="timer"
-       document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-       + minutes + "m " + seconds + "s ";
+            // Display the result in the element with id="timer"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+               + minutes + "m " + seconds + "s ";
 
-       // If the count down is finished, write some text
-       if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("timer").innerHTML = "EXPIRED";
-       }
-    }, 1000);
-</script>
+            // If the count down is finished, write some text
+            if (distance < 0) {
+               clearInterval(x);
+               document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+         }, 1000);
+      </script>
 
-</section>
-<section class="About">
-<h1>About the Event</h1>
-<p>Code Hunt is a thrilling treasure hunt competition that challenges participants to solve programming puzzles and uncover clues to progress through various levels. It tests problem-solving skills, algorithmic thinking, and coding proficiency in a fun and competitive environment. Participants will face a series of programming challenges that require creativity and logical reasoning to solve. As they successfully complete each challenge, they will receive clues that lead them to the next level, ultimately aiming to reach the top of the leaderboard. The event is spread across 5 levels and 2 major sections.</p>
-<div class="col">   
-    <h3>Phase 1: Problem Solving</h3>
-    <p>Participants will be given a set of programming challenges to solve within a specified time limit, without external assistance(Ai & Other Softwares).</p>
-</div>
-<div class="col">   
-    <h3>Phase 2: Clue Hunting</h3>
-    <p>Participants will be allowed to use digital resources to solve Phase 2 Questions and Decode the next clues.</p>
-</div>
-<div class="col2">   
-    <h3>Theme</h3>
-    <h5>The event is themed around a mysterious digital world where participants must navigate through code-based challenges to uncover hidden treasures using Manual and Software-based Decoding with the help of programming languages like C & Python.</h5>
-</div>
+   </section>
+   <section class="About">
+      <h1>About the Event</h1>
+      <p>Code Hunt is a thrilling treasure hunt competition that challenges participants to solve programming puzzles
+         and uncover clues to progress through various levels. It tests problem-solving skills, algorithmic thinking,
+         and coding proficiency in a fun and competitive environment. Participants will face a series of programming
+         challenges that require creativity and logical reasoning to solve. As they successfully complete each
+         challenge, they will receive clues that lead them to the next level, ultimately aiming to reach the top of the
+         leaderboard. The event is spread across 5 levels and 2 major sections.</p>
+      <div class="col">
+         <h3>Phase 1: Problem Solving</h3>
+         <p>Participants will be given a set of programming challenges to solve within a specified time limit, without
+            external assistance(Ai & Other Softwares).</p>
+      </div>
+      <div class="col">
+         <h3>Phase 2: Clue Hunting</h3>
+         <p>Participants will be allowed to use digital resources to solve Phase 2 Questions and Decode the next clues.
+         </p>
+      </div>
+      <div class="col2">
+         <h3>Theme</h3>
+         <h5>The event is themed around a mysterious digital world where participants must navigate through code-based
+            challenges to uncover hidden treasures using Manual and Software-based Decoding with the help of programming
+            languages like C & Python.</h5>
+      </div>
 
-<!----Rules fo Event ---->
-<section class="Rules">
-<h1>Rules for Participants</h1>
-
-
-<div class="row">
-    <div class="Rules">
-       <h3>Team Registration</h3>
-       <p>Teams must consist of 2-4 members and register online before the deadline.</p>
-    </div>
-    <div class="Rules">
-       <h3>Judging Criteria</h3>
-       <p>Innovation<br>Technical complexity<br>Design<br>Impact.</p>
-    </div>
-    <div class="Rules">
-       <h3>Prize Money</h3>
-       <p>1st Place: ₹5,000<br>2nd Place: ₹3,000<br>3rd Place: ₹2,000</p>
-    </div>
-</div>
-</section>
-
-<!----Contact Us---->
-
-<section class="Contact">
-<h1>Contact Us</h1>
-<p>For any queries or assistance regarding the competition, please feel free to contact us at:</p>
-
-<div class="row">
-    <div class="Contact">
-       <h3>Email</h3>
-       <p>Forum: aiemsaimlofficial@gmail.com<br>Student Coordinator: sharmashalini3126@gmail.com</p>
-    </div>
-</div>
-</section>
-
-<!----Footer Section---->
-<section class="footer">
-    <h4>Copyright © 2026 All rights reserved <br> This webpage is made by DAN</h4>
-    <p>Designed for Techno-Quest 3.0 Code Hunt</p>
-    <div class="icons">
-       <a href="#"><i class="fa fa-facebook"></i></a>
-       <a href="#"><i class="fa fa-twitter"></i></a>
-       <a href="#"><i class="fa fa-instagram"></i></a>
-       <a href="#"><i class="fa fa-linkedin"></i></a>
-    </div>
-
-</section>
+      <!----Rules fo Event ---->
+      <section class="Rules">
+         <h1>Rules for Participants</h1>
 
 
+         <div class="row">
+            <div class="Rules">
+               <h3>Team Registration</h3>
+               <p>Teams must consist of 2-4 members and register online before the deadline.</p>
+            </div>
+            <div class="Rules">
+               <h3>Judging Criteria</h3>
+               <p>Innovation<br>Technical complexity<br>Design<br>Impact.</p>
+            </div>
+            <div class="Rules">
+               <h3>Prize Money</h3>
+               <p>1st Place: ₹5,000<br>2nd Place: ₹3,000<br>3rd Place: ₹2,000</p>
+            </div>
+         </div>
+      </section>
 
-<!----JavaScript for ToggleMenu---->
- <script>
-    
-    var navLinks = document.getElementById("nav-links");
+      <!----Contact Us---->
 
-    function showMenu(){
-       navLinks.style.right = "0";
-    }
-    function hideMenu(){
-       navLinks.style.right = "-200px";
-    }
- </script> 
+      <section class="Contact">
+         <h1>Contact Us</h1>
+         <p>For any queries or assistance regarding the competition, please feel free to contact us at:</p>
+
+         <div class="row">
+            <div class="Contact">
+               <h3>Email</h3>
+               <p>Forum: aiemsaimlofficial@gmail.com<br>Student Coordinator: sharmashalini3126@gmail.com</p>
+            </div>
+         </div>
+      </section>
+
+      <!----Footer Section---->
+      <section class="footer">
+         <h4>Copyright © 2026 All rights reserved <br> This webpage is made by DAN</h4>
+         <p>Designed for Techno-Quest 3.0 Code Hunt</p>
+         <div class="icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+         </div>
+
+      </section>
+
+
+
+      <!----JavaScript for ToggleMenu---->
+      <script>
+
+         var navLinks = document.getElementById("nav-links");
+
+         function showMenu() {
+            navLinks.style.right = "0";
+         }
+         function hideMenu() {
+            navLinks.style.right = "-200px";
+         }
+      </script>
 </body>
+
 </html>
